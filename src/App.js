@@ -1,17 +1,24 @@
 import React from 'react';
-import Products from './Products.js';
+import './App.css';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Reports from './pages/Reports';
+import Products from './pages/Products';
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <header className="App-header"><h1>My React App</h1></header>
-        <section>
-          <Products ></Products>
-        </section>
-      </div>
-    );
-  }
-} 
+function App() {
+  return (
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/reports' component={Reports} />
+          <Route path='/products' component={Products} />
+        </Switch>
+      </Router>
+    </>
+  );
+}
 
 export default App;
