@@ -9,10 +9,24 @@
 
 .home,
 .reports,
-.products {
+.products,
+.ddStreamFlow,
+.ddBatchFlow
+.expression,
+.filter,
+.aggregator,
+.deDuplicator
+ {
   display: flex;
   height: 90vh;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+}
+.ddCapabilites
+ {
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+
 }
